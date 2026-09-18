@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0a10">
+<title>For Melika ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0b0a10;color:#f8f3ef;font-family:"DM Sans",sans-serif;overflow-x:hidden}
+button{font:inherit}
+.page{min-height:100svh;position:relative}
+.glow{position:fixed;width:280px;height:280px;border-radius:50%;filter:blur(90px);opacity:.16;pointer-events:none;background:#d9a0b5;top:5%;left:50%;transform:translateX(-50%)}
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:34px 22px;text-align:center}
+.hero-inner{max-width:600px}
+.mini{font-size:12px;letter-spacing:3px;text-transform:uppercase;opacity:.58;margin-bottom:18px}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:600}
+h1{font-size:clamp(56px,16vw,94px);line-height:.82;margin:0 0 24px}
+h1 span{display:block;font-size:.52em;line-height:1.2;font-family:"DM Sans",sans-serif;font-weight:400;letter-spacing:0;opacity:.82;margin-top:16px}
+.lead{font-size:16px;line-height:1.8;opacity:.78;max-width:390px;margin:0 auto 30px}
+.primary{border:0;border-radius:999px;padding:15px 24px;background:#f5e9e7;color:#171219;font-weight:600;cursor:pointer;box-shadow:0 12px 35px rgba(0,0,0,.3)}
+.heart{display:inline-block;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.16)}}
+.content{max-width:760px;margin:auto;padding:0 18px 70px}
+.photo-wrap{position:relative;margin:0 -2px 58px;border-radius:28px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.45)}
+.photo{display:block;width:100%;height:auto}
+.photo-caption{position:absolute;bottom:0;left:0;right:0;padding:70px 22px 24px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-family:"Cormorant Garamond",serif;font-size:25px}
+.section{text-align:center;margin:70px 0}
+.section h2{font-size:42px;margin:0 0 12px}
+.section p{line-height:1.8;opacity:.72;margin:0 auto;max-width:560px}
+.card{margin:14px 0;padding:23px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.035);border-radius:22px;text-align:left;cursor:pointer;transition:.25s}
+.card:hover{transform:translateY(-2px);background:rgba(255,255,255,.055)}
+.card-title{font-weight:600;display:flex;justify-content:space-between;gap:15px}
+.card-body{display:none;padding-top:13px;line-height:1.75;opacity:.76}
+.card.open .card-body{display:block}
+.rx{margin-top:28px;padding:28px 24px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.1);text-align:left}
+.rx-head{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.55}
+.rx h3{font-family:"Cormorant Garamond",serif;font-size:38px;margin:7px 0 16px}
+.rx ul{margin:0;padding-left:20px;line-height:2}
+.rx-note{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;opacity:.55}
+.choice{display:grid;gap:12px;margin-top:24px}
+.choice button{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.035);color:#fff;padding:16px;border-radius:18px;cursor:pointer}
+.message{min-height:28px;margin-top:18px;font-family:"Cormorant Garamond",serif;font-size:24px}
+.footer{text-align:center;padding:30px 18px 55px;opacity:.8}
+.footer .big{font-family:"Cormorant Garamond",serif;font-size:34px;line-height:1.25}
+.small{font-size:12px;opacity:.48;margin-top:12px}
+.fade{opacity:0;transform:translateY(18px);transition:.7s ease}
+.fade.show{opacity:1;transform:none}
+#main{display:none}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="glow"></div>
+
+<section class="hero" id="welcome">
+  <div class="hero-inner">
+    <div class="mini">A tiny place on the internet, just for you</div>
+    <h1>Hey, Melika<span>♡ I made this for you.</span></h1>
+    <p class="lead">I know you're not feeling your best today.<br>So for the next few minutes, you don't have to think about anything else.</p>
+    <button class="primary" onclick="openSite()">Open this for me? 🥺</button>
+  </div>
+</section>
+
+<main id="main">
+<div class="content">
+
+  <div class="photo-wrap fade">
+    <img class="photo" src="our-photo.jpeg" alt="A memory of us">
+    <div class="photo-caption">One of my favorite memories with you. ♡</div>
+  </div>
+
+  <section class="section fade">
+    <div class="mini">If I were there right now...</div>
+    <h2>Come here. 🫂</h2>
+    <p>I'd hold you close, play with your hair, and stay right beside you until you felt a little better.</p>
+  </section>
+
+  <section class="fade">
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-title">💌 A little reminder <span>+</span></div>
+      <div class="card-body">Even when I can't be right there with you, you're always somewhere in my thoughts.</div>
+    </div>
+    <div class="card" onclick="toggleCard(this)">
+      <div class="card-title">❤️ One more thing... <span>+</span></div>
+      <div class="card-body">You don't have to be strong all the time. You don't have to pretend you're okay. You can have bad days too — and I'll still love you through every single one of them.</div>
+    </div>
+  </section>
+
+  <section class="rx fade">
+    <div class="rx-head">Official medical advice</div>
+    <h3>Your prescription for tonight<br>from Dr. Arsalan ♡</h3>
+    <ul>
+      <li>Drink some water. 💧</li>
+      <li>Get cozy under your favorite blanket. 🧸</li>
+      <li>Put on a song that makes you feel safe. 🎵</li>
+      <li>Forget about everything you don't need to solve tonight.</li>
+      <li>Take one very long hug from me. 🫂</li>
+    </ul>
+    <div class="rx-note">Dosage: as many times as needed. Side effects may include smiling.</div>
+  </section>
+
+  <section class="section fade">
+    <div class="mini">No pressure</div>
+    <h2>How are we doing?</h2>
+    <div class="choice">
+      <button onclick="comfort(0)">I still don't feel better 🥺</button>
+      <button onclick="comfort(1)">Okay... I'm feeling a little better :)</button>
+    </div>
+    <div class="message" id="message"></div>
+  </section>
+
+  <section class="section fade">
+    <h2>Melika,</h2>
+    <p>I may not be able to fix every bad day, but I hope I can make at least one of them a little softer.</p>
+  </section>
+
+</div>
+<footer class="footer">
+  <div class="big">I love you. ❤️</div>
+  <div class="small">Made with love by Dr. Arsalan · for one very special girl</div>
+</footer>
+</main>
+</div>
+
+<script>
+function openSite(){
+  document.getElementById('welcome').style.display='none';
+  document.getElementById('main').style.display='block';
+  document.querySelectorAll('.fade').forEach((el,i)=>setTimeout(()=>el.classList.add('show'),i*90));
+  window.scrollTo(0,0);
+}
+function toggleCard(card){
+  card.classList.toggle('open');
+  card.querySelector('.card-title span').textContent=card.classList.contains('open')?'−':'+';
+}
+const msgs=[
+  ["Okay... come here. 🫂<br>One more hug. I'm not letting go yet.","You're allowed to have a bad day. I'm staying right here. ❤️","Still here. You don't have to rush feeling better.","One more hug. Then another. That's the treatment."],
+  ["There you are. ❤️<br>That's the smile I wanted to see.","See? That's already a little better. Come here. 🫂"]
+];
+function comfort(type){
+  const box=document.getElementById('message');
+  const arr=msgs[type];
+  box.innerHTML=arr[Math.floor(Math.random()*arr.length)];
+  if(type===1) burst();
+}
+function burst(){
+  for(let i=0;i<22;i++){
+    const s=document.createElement('span');
+    s.textContent=['♡','♥','✦'][Math.floor(Math.random()*3)];
+    s.style.position='fixed';s.style.left=(10+Math.random()*80)+'vw';s.style.top='55vh';
+    s.style.fontSize=(14+Math.random()*22)+'px';s.style.pointerEvents='none';
+    s.style.transition='transform 1.3s ease, opacity 1.3s ease';
+    document.body.appendChild(s);
+    requestAnimationFrame(()=>{s.style.transform=`translate(${(Math.random()-.5)*180}px, -${120+Math.random()*300}px) rotate(${Math.random()*180}deg)`;s.style.opacity='0'});
+    setTimeout(()=>s.remove(),1400);
+  }
+}
+</script>
+</body>
+</html>
